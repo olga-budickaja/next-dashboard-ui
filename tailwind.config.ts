@@ -21,6 +21,7 @@ const config: Config = {
         buddaYellow: "#FAE27C",
         buddaYellowLight: "#FEFCE8",
         buddaPink: "#fac3f3",
+        buddaPinkLight: "#fde4fa",
       },
     },
   },

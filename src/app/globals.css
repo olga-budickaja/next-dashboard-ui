@@ -14,3 +14,76 @@
 .react-calendar__navigation__label__labelText {
   font-weight: 600 !important;
 }
+.rbc-btn-group:first-child {
+  display: none !important;
+}
+.rbc-toolbar-label {
+  text-align: right !important;
+  text-transform: capitalize !important;
+  padding: 0 20px !important;
+}
+.rbc-btn-group:last-child {
+  font-size: 13px !important;
+}
+.rbc-btn-group:last-child button {
+  border: none !important;
+  background-color: #f1f0ff !important;
+  margin-left: 2px !important;
+}
+.rbc-toolbar button.rbc-active {
+  box-shadow: none !important;
+  background-color: #dbdafe !important;
+}
+.rbc-time-view {
+  border-color: #eee !important;
+}
+.rbc-time-content {
+  border-top: none !important;
+}
+.rbc-time-gutter.rbc-time-column {
+  font-size: 12px !important;
+}
+.rbc-time-gutter.rbc-time-column .rbc-timeslot-group {
+  padding: 0px 20px !important;
+}
+.rbc-event-content {
+  font-size: 12px !important;
+}
+.rbc-timeslot-group {
+  border-color: #f7fdff !important;
+  min-height: 70px !important;
+}
+.rbc-day-slot {
+  font-size: 14px !important;
+}
+.rbc-event {
+  border: none !important;
+  color: black !important;
+  padding: 10px !important;
+  margin: 7px 0 !important;
+  width: 99% !important;
+  display: flex !important;
+  flex-direction: column !important;
+  min-height: fit-content !important;
+}
+.rbc-row-segment .rbc-event-content {
+  white-space: pre-wrap !important;
+}
+.rbc-time-content {
+  overflow: hidden !important;
+}
+.rbc-time-content > * + * > * {
+  border-left: 1px dashed #ddd !important;
+}
+.rbc-button-link {
+  padding: 10px 0 20px 0 !important;
+}
+.rbc-event-label {
+  color: gray !important;
+  margin-bottom: 5px !important;
+}
+
+/* Стиль для інтервалів часу */
+.rbc-time-column {
+  height: auto !important;
+}

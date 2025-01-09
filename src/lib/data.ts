@@ -915,149 +915,231 @@ export const announcementsData = [
   },
 ];
 
-
 // YOU SHOULD CHANGE THE DATES OF THE EVENTS TO THE CURRENT DATE TO SEE THE EVENTS ON THE CALENDAR
+// export const calendarEvents = [
+//   {
+//     title: "Math",
+//     allDay: false,
+//     start: new Date(2025, 1, 12, 8, 0),
+//     end: new Date(2025, 1, 12, 8, 45),
+//   },
+//   {
+//     title: "English",
+//     allDay: false,
+//     start: new Date(2025, 1, 12, 9, 0),
+//     end: new Date(2025, 1, 12, 9, 45),
+//   },
+//   {
+//     title: "Biology",
+//     allDay: false,
+//     start: new Date(2025, 1, 12, 10, 0),
+//     end: new Date(2025, 1, 12, 10, 45),
+//   },
+//   {
+//     title: "Physics",
+//     allDay: false,
+//     start: new Date(2025, 1, 12, 11, 0),
+//     end: new Date(2025, 7, 12, 11, 45),
+//   },
+//   {
+//     title: "Chemistry",
+//     allDay: false,
+//     start: new Date(2025, 1, 12, 13, 0),
+//     end: new Date(2025, 1, 12, 13, 45),
+//   },
+//   {
+//     title: "History",
+//     allDay: false,
+//     start: new Date(2025, 1, 12, 14, 0),
+//     end: new Date(2025, 1, 12, 14, 45),
+//   },
+//   {
+//     title: "English",
+//     allDay: false,
+//     start: new Date(2025, 1, 13, 9, 0),
+//     end: new Date(2025, 1, 13, 9, 45),
+//   },
+//   {
+//     title: "Biology",
+//     allDay: false,
+//     start: new Date(2025, 1, 13, 10, 0),
+//     end: new Date(2025, 1, 13, 10, 45),
+//   },
+//   {
+//     title: "Physics",
+//     allDay: false,
+//     start: new Date(2025, 1, 13, 11, 0),
+//     end: new Date(2025, 1, 13, 11, 45),
+//   },
+
+//   {
+//     title: "History",
+//     allDay: false,
+//     start: new Date(2025, 1, 13, 14, 0),
+//     end: new Date(2025, 1, 13, 14, 45),
+//   },
+//   {
+//     title: "Math",
+//     allDay: false,
+//     start: new Date(2025, 1, 14, 8, 0),
+//     end: new Date(2025, 1, 14, 8, 45),
+//   },
+//   {
+//     title: "Biology",
+//     allDay: false,
+//     start: new Date(2025, 1, 14, 10, 0),
+//     end: new Date(2025, 1, 14, 10, 45),
+//   },
+
+//   {
+//     title: "Chemistry",
+//     allDay: false,
+//     start: new Date(2025, 1, 14, 13, 0),
+//     end: new Date(2025, 1, 14, 13, 45),
+//   },
+//   {
+//     title: "History",
+//     allDay: false,
+//     start: new Date(2025, 1, 14, 14, 0),
+//     end: new Date(2025, 1, 13, 14, 45),
+//   },
+//   {
+//     title: "English",
+//     allDay: false,
+//     start: new Date(2025, 1, 15, 9, 0),
+//     end: new Date(2025, 1, 15, 9, 45),
+//   },
+//   {
+//     title: "Biology",
+//     allDay: false,
+//     start: new Date(2025, 1, 15, 10, 0),
+//     end: new Date(2025, 1, 15, 10, 45),
+//   },
+//   {
+//     title: "Physics",
+//     allDay: false,
+//     start: new Date(2025, 1, 15, 11, 0),
+//     end: new Date(2025, 1, 15, 11, 45),
+//   },
+
+//   {
+//     title: "History",
+//     allDay: false,
+//     start: new Date(2025, 1, 15, 14, 0),
+//     end: new Date(2025, 1, 15, 14, 45),
+//   },
+//   {
+//     title: "Math",
+//     allDay: false,
+//     start: new Date(2025, 1, 16, 8, 0),
+//     end: new Date(2025, 1, 16, 8, 45),
+//   },
+//   {
+//     title: "English",
+//     allDay: false,
+//     start: new Date(2025, 1, 16, 9, 0),
+//     end: new Date(2025, 1, 16, 9, 45),
+//   },
+
+//   {
+//     title: "Physics",
+//     allDay: false,
+//     start: new Date(2025, 1, 16, 11, 0),
+//     end: new Date(2025, 1, 16, 11, 45),
+//   },
+//   {
+//     title: "Chemistry",
+//     allDay: false,
+//     start: new Date(2025, 1, 16, 13, 0),
+//     end: new Date(2025, 1, 16, 13, 45),
+//   },
+//   {
+//     title: "History",
+//     allDay: false,
+//     start: new Date(2025, 1, 16, 14, 0),
+//     end: new Date(2025, 1, 16, 14, 45),
+//   },
+// ];
 export const calendarEvents = [
   {
-    title: "Math",
-    allDay: false,
-    start: new Date(2024, 7, 12, 8, 0),
-    end: new Date(2024, 7, 12, 8, 45),
+    title: "Вг: 70 кг\nКл: 2000\n",
+    allDay: true,
+    start: new Date(2025, 0, 6), // 1 січня 2025
+    end: new Date(2025, 0, 6),
+    weight: 69.2,
   },
   {
-    title: "English",
-    allDay: false,
-    start: new Date(2024, 7, 12, 9, 0),
-    end: new Date(2024, 7, 12, 9, 45),
+    title: "Вг: 69.8 кг\nКл: 2100\n",
+    allDay: true,
+    start: new Date(2025, 0, 7), // 2 січня 2025
+    end: new Date(2025, 0, 7),
+    weight: 69.2,
   },
   {
-    title: "Biology",
-    allDay: false,
-    start: new Date(2024, 7, 12, 10, 0),
-    end: new Date(2024, 7, 12, 10, 45),
+    title: "Вг: 69.6 кг\nКл: 1950\n",
+    allDay: true,
+    start: new Date(2025, 0, 8), // 3 січня 2025
+    end: new Date(2025, 0, 8),
+    weight: 69.2,
   },
   {
-    title: "Physics",
-    allDay: false,
-    start: new Date(2024, 7, 12, 11, 0),
-    end: new Date(2024, 7, 12, 11, 45),
+    title: "Вг: 69.5 кг\nКл: 1800",
+    allDay: true,
+    start: new Date(2025, 0, 9), // 4 січня 2025
+    end: new Date(2025, 0, 9),
+    weight: 69.2,
   },
   {
-    title: "Chemistry",
-    allDay: false,
-    start: new Date(2024, 7, 12, 13, 0),
-    end: new Date(2024, 7, 12, 13, 45),
+    title: "Вг: 69.3 кг\nКл: 2200",
+    allDay: true,
+    start: new Date(2025, 0, 10), // 5 січня 2025
+    end: new Date(2025, 0, 10),
+    weight: 99.2,
   },
   {
-    title: "History",
-    allDay: false,
-    start: new Date(2024, 7, 12, 14, 0),
-    end: new Date(2024, 7, 12, 14, 45),
+    title: "Вг: 69.2 кг\nКл: 1900",
+    allDay: true,
+    start: new Date(2025, 0, 11), // 6 січня 2025
+    end: new Date(2025, 0, 11),
+    weight: 69.2,
   },
   {
-    title: "English",
-    allDay: false,
-    start: new Date(2024, 7, 13, 9, 0),
-    end: new Date(2024, 7, 13, 9, 45),
+    title: "Вг: 69.0 кг\nКл: 2000",
+    allDay: true,
+    start: new Date(2025, 0, 12), // 7 січня 2025
+    end: new Date(2025, 0, 12),
+    weight: 85.2,
   },
   {
-    title: "Biology",
-    allDay: false,
-    start: new Date(2024, 7, 13, 10, 0),
-    end: new Date(2024, 7, 13, 10, 45),
+    title: "Вг: 68.8 кг\nКл: 1850",
+    allDay: true,
+    start: new Date(2025, 0, 13), // 8 січня 2025
+    end: new Date(2025, 0, 13),
+    weight: 69.2,
   },
   {
-    title: "Physics",
-    allDay: false,
-    start: new Date(2024, 7, 13, 11, 0),
-    end: new Date(2024, 7, 13, 11, 45),
-  },
-
-  {
-    title: "History",
-    allDay: false,
-    start: new Date(2024, 7, 13, 14, 0),
-    end: new Date(2024, 7, 13, 14, 45),
+    title: "Вг: 68.7 кг\nКл: 1950",
+    allDay: true,
+    start: new Date(2025, 0, 14), // 9 січня 2025
+    end: new Date(2025, 0, 14),
+    weight: 69.2,
   },
   {
-    title: "Math",
+    title: "Спина, плечі",
     allDay: false,
-    start: new Date(2024, 7, 14, 8, 0),
-    end: new Date(2024, 7, 14, 8, 45),
+    start: new Date(2025, 0, 6, 15, 0, 0), // 2 січня 2025
+    end: new Date(2025, 0, 6, 15, 40, 0),
   },
   {
-    title: "Biology",
+    title: "Попа, ноги",
     allDay: false,
-    start: new Date(2024, 7, 14, 10, 0),
-    end: new Date(2024, 7, 14, 10, 45),
-  },
-
-  {
-    title: "Chemistry",
-    allDay: false,
-    start: new Date(2024, 7, 14, 13, 0),
-    end: new Date(2024, 7, 14, 13, 45),
+    start: new Date(2025, 0, 9, 19, 0, 0), // 2 січня 2025
+    end: new Date(2025, 0, 9, 19, 40, 0),
   },
   {
-    title: "History",
+    title: "Бігова доріжка",
     allDay: false,
-    start: new Date(2024, 7, 14, 14, 0),
-    end: new Date(2024, 7, 13, 14, 45),
-  },
-  {
-    title: "English",
-    allDay: false,
-    start: new Date(2024, 7, 15, 9, 0),
-    end: new Date(2024, 7, 15, 9, 45),
-  },
-  {
-    title: "Biology",
-    allDay: false,
-    start: new Date(2024, 7, 15, 10, 0),
-    end: new Date(2024, 7, 15, 10, 45),
-  },
-  {
-    title: "Physics",
-    allDay: false,
-    start: new Date(2024, 7, 15, 11, 0),
-    end: new Date(2024, 7, 15, 11, 45),
-  },
-
-  {
-    title: "History",
-    allDay: false,
-    start: new Date(2024, 7, 15, 14, 0),
-    end: new Date(2024, 7, 15, 14, 45),
-  },
-  {
-    title: "Math",
-    allDay: false,
-    start: new Date(2024, 7, 16, 8, 0),
-    end: new Date(2024, 7, 16, 8, 45),
-  },
-  {
-    title: "English",
-    allDay: false,
-    start: new Date(2024, 7, 16, 9, 0),
-    end: new Date(2024, 7, 16, 9, 45),
-  },
-
-  {
-    title: "Physics",
-    allDay: false,
-    start: new Date(2024, 7, 16, 11, 0),
-    end: new Date(2024, 7, 16, 11, 45),
-  },
-  {
-    title: "Chemistry",
-    allDay: false,
-    start: new Date(2024, 7, 16, 13, 0),
-    end: new Date(2024, 7, 16, 13, 45),
-  },
-  {
-    title: "History",
-    allDay: false,
-    start: new Date(2024, 7, 16, 14, 0),
-    end: new Date(2024, 7, 16, 14, 45),
+    start: new Date(2025, 0, 11, 12, 0, 0), // 2 січня 2025
+    end: new Date(2025, 0, 11, 12, 40, 0),
   },
 ];
