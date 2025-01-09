@@ -8,19 +8,19 @@ const menuItems = [
     items: [
       {
         icon: "/home.png",
-        label: "Home",
-        href: "/",
+        label: "Головна",
+        href: "/admin",
         visible: ["admin", "trainer", "trainable"],
       },
-      {
-        icon: "/trainer.png",
-        label: "Trainers",
-        href: "/list/trainers",
-        visible: ["admin", "trainer"],
-      },
+      // {
+      //   icon: "/trainer.png",
+      //   label: "Trainers",
+      //   href: "/list/trainers",
+      //   visible: ["admin", "trainer"],
+      // },
       {
         icon: "/student.png",
-        label: "Trainables",
+        label: "Підопічні",
         href: "/list/trainables",
         visible: ["admin", "trainer"],
       },
@@ -32,13 +32,13 @@ const menuItems = [
       // },
       {
         icon: "/subject.png",
-        label: "Subjects",
+        label: "Пакети тренувань",
         href: "/list/subjects",
-        visible: ["admin"],
+        visible: ["admin", "trainables"],
       },
       {
         icon: "/class.png",
-        label: "Classes",
+        label: "Календар тренувань",
         href: "/list/classes",
         visible: ["admin", "trainer"],
       },
