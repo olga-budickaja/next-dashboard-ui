@@ -39,7 +39,7 @@ const menuItems = [
       {
         icon: "/class.png",
         label: "Календар тренувань",
-        href: "/list/classes",
+        href: "/list/trainings",
         visible: ["admin", "trainer"],
       },
       {

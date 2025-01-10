@@ -135,7 +135,6 @@ export const trainablesData = [
   },
 ];
 
-
 // export const studentsData = [
 //   {
 //     id: 1,
@@ -356,29 +355,21 @@ export const subjectsData = [
   {
     id: 1,
     name: "Trainings1",
-    trainables: ["Alice Phelps", "Russell Davidson"],
-    integration: "Наживо",
+    bought: "70",
     price: "400 грн.",
     salePrice: "290 грн.",
   },
   {
     id: 2,
     name: "Trainings2",
-    trainables: ["Alice Phelps", "Russell Davidson", "Alina Pupko"],
-    integration: "В записі",
+    bought: "250",
     price: "300 грн.",
     salePrice: "190 грн.",
   },
   {
     id: 3,
     name: "Trainings3",
-    trainables: [
-      "Alice Phelps",
-      "Russell Davidson",
-      "Alina Pupko",
-      "Svitlana Lana",
-    ],
-    integration: "Наживо",
+    bought: "10",
     price: "800 грн.",
     salePrice: "390 грн.",
   },
@@ -1141,5 +1132,92 @@ export const calendarEvents = [
     allDay: false,
     start: new Date(2025, 0, 11, 12, 0, 0), // 2 січня 2025
     end: new Date(2025, 0, 11, 12, 40, 0),
+  },
+];
+
+export const trainingsCalendarEvents = [
+  {
+    title: "John Doe",
+    integration: "online",
+    allDay: false,
+    start: new Date(2025, 0, 10, 12, 0, 0), // 2 січня 2025
+    end: new Date(2025, 0, 10, 12, 40, 0),
+  },
+  {
+    title: "Mike Geller",
+    integration: "online",
+    allDay: false,
+    start: new Date(2025, 0, 9, 14, 0, 0), // 2 січня 2025
+    end: new Date(2025, 0, 9, 14, 40, 0),
+  },
+  {
+    title: "Mike Geller",
+    integration: "online",
+    allDay: false,
+    start: new Date(2025, 0, 9, 18, 0, 0), // 2 січня 2025
+    end: new Date(2025, 0, 9, 18, 40, 0),
+  },
+  {
+    title: "John Doe",
+    integration: "ofline",
+    allDay: false,
+    start: new Date(2025, 0, 8, 8, 0, 0), // 2 січня 2025
+    end: new Date(2025, 0, 8, 8, 40, 0),
+  },
+  {
+    title: "Mike Geller",
+    integration: "online",
+    allDay: false,
+    start: new Date(2025, 0, 8, 10, 0, 0), // 2 січня 2025
+    end: new Date(2025, 0, 8, 10, 40, 0),
+  },
+  {
+    title: "Mike Geller",
+    integration: "online",
+    allDay: false,
+    start: new Date(2025, 0, 8, 18, 0, 0), // 2 січня 2025
+    end: new Date(2025, 0, 8, 18, 40, 0),
+  },
+  {
+    title: "John Doe",
+    integration: "online",
+    allDay: false,
+    start: new Date(2025, 0, 7, 11, 0, 0), // 2 січня 2025
+    end: new Date(2025, 0, 7, 11, 40, 0),
+  },
+  {
+    title: "Mike Geller",
+    integration: "ofline",
+    allDay: false,
+    start: new Date(2025, 0, 7, 15, 0, 0), // 2 січня 2025
+    end: new Date(2025, 0, 7, 15, 40, 0),
+  },
+  {
+    title: "Mike Geller",
+    integration: "online",
+    allDay: false,
+    start: new Date(2025, 0, 10, 18, 0, 0), // 2 січня 2025
+    end: new Date(2025, 0, 10, 18, 40, 0),
+  },
+  {
+    title: "John Doe",
+    integration: "online",
+    allDay: false,
+    start: new Date(2025, 0, 11, 19, 0, 0), // 2 січня 2025
+    end: new Date(2025, 0, 11, 19, 40, 0),
+  },
+  {
+    title: "Mike Geller",
+    integration: "online",
+    allDay: false,
+    start: new Date(2025, 0, 11, 17, 0, 0), // 2 січня 2025
+    end: new Date(2025, 0, 11, 17, 40, 0),
+  },
+  {
+    title: "Mike Geller",
+    integration: "online",
+    allDay: false,
+    start: new Date(2025, 0, 11, 8, 0, 0), // 2 січня 2025
+    end: new Date(2025, 0, 11, 8, 40, 0),
   },
 ];

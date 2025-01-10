@@ -6,7 +6,6 @@ import { format } from "date-fns";
 import { parse } from "date-fns";
 import { startOfWeek } from "date-fns";
 import { getDay } from "date-fns";
-import { calendarEvents } from "@/lib/data";
 import "react-big-calendar/lib/css/react-big-calendar.css";
 import { useState } from "react";
 
@@ -41,16 +40,22 @@ const messages = {
 
 // Кастомний компонент для відображення події
 const CustomEvent = ({ event }: any) => {
-  const { weight, cal, title } = event;
+  const { weight, cal, title, integration } = event;
 
   // Умова для визначення знаку
   let icon = weight <= 80 || cal <= 1600 ? "✅" : "❌"; // Використовуємо зелений для нормальної ваги, червоний для високої
+  let iconIntegration = integration === "online" ? "🌐" : "🏋️‍♀️";
 
   return (
     <div style={{ display: "flex", alignItems: "center" }}>
       {weight ? (
         <>
           <span style={{ marginRight: "10px" }}>{icon}</span>
+          <span>{title}</span>
+        </>
+      ) : integration ? (
+        <>
+          <span style={{ marginRight: "10px" }}>{iconIntegration}</span>
           <span>{title}</span>
         </>
       ) : (
@@ -60,7 +65,26 @@ const CustomEvent = ({ event }: any) => {
   );
 };
 
-const BigCalendar = () => {
+const BigCalendar = ({
+  calendarEvents,
+}: {
+  calendarEvents: (
+    | {
+        title: string;
+        allDay: boolean;
+        start: Date;
+        end: Date;
+        weight: number;
+      }
+    | {
+        title: string;
+        allDay: boolean;
+        start: Date;
+        end: Date;
+        weight?: undefined;
+      }
+  )[];
+}) => {
   const [view, setView] = useState<View>(Views.WEEK);
 
   const handleChangeView = (selectedView: View) => {

@@ -16,33 +16,33 @@ import {
 const data = [
   {
     name: "Пн.",
-    присутні: 9,
-    відсутні: 1,
+    відвідали: 9,
+    купили: 1,
   },
   {
     name: "Вт.",
-    присутні: 7,
-    відсутні: 3,
+    відвідали: 7,
+    купили: 3,
   },
   {
     name: "Ср.",
-    присутні: 8,
-    відсутні: 2,
+    відвідали: 8,
+    купили: 2,
   },
   {
     name: "Чт.",
-    присутні: 7,
-    відсутні: 3,
+    відвідали: 7,
+    купили: 3,
   },
   {
     name: "Пт.",
-    присутні: 9,
-    відсутні: 1,
+    відвідали: 9,
+    купили: 1,
   },
   {
     name: "Сб.",
-    присутні: 8,
-    відсутні: 2,
+    відвідали: 8,
+    купили: 2,
   },
 ];
 
@@ -50,7 +50,7 @@ const AttendanceChart = () => {
   return (
     <div className="bg-white rounded-xl w-full h-full p-4">
       <div className="flex justify-between items-center">
-        <h2 className="text-lg font-semibold">Присутність</h2>
+        <h2 className="text-lg font-semibold">відвідалисть</h2>
         <Image
           src="/moreDark.png"
           alt="Дізнатися більше"
@@ -77,13 +77,13 @@ const AttendanceChart = () => {
               wrapperStyle={{ paddingTop: "20px", paddingBottom: "40px" }}
             />
             <Bar
-              dataKey="присутні"
+              dataKey="відвідали"
               fill="#C3EBFA"
               legendType="circle"
               radius={[10, 10, 0, 0]}
             />
             <Bar
-              dataKey="відсутні"
+              dataKey="купили"
               fill="#FAE27C"
               legendType="circle"
               radius={[10, 10, 0, 0]}
