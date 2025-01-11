@@ -594,7 +594,6 @@ export const videoDescriptionData = [
   },
 ];
 
-
 export const feedbackData = [
   {
     id: 1,
@@ -631,6 +630,58 @@ export const feedbackData = [
     date: "11.01.2025",
     time: "13:57",
     call: true,
+  },
+];
+
+export const announcementsData = [
+  {
+    id: 1,
+    title: "Ранкове кардіо для енергії на весь день",
+    src: "https://images.pexels.com/photos/3757371/pexels-photo-3757371.jpeg",
+    categories: ["Кардіо", "Ранкові тренування"],
+    date: "2025-01-10 08:00:00",
+  },
+  {
+    id: 2,
+    title: "Силове тренування для всього тіла",
+    src: "https://images.pexels.com/photos/2261485/pexels-photo-2261485.jpeg",
+    categories: ["Силові тренування", "Здоров'я"],
+    date: "2025-06-15 18:30:00",
+  },
+  {
+    id: 3,
+    title: "Йога для релаксації та зняття стресу",
+    src: "https://images.pexels.com/photos/3823039/pexels-photo-3823039.jpeg",
+    categories: ["Йога", "Медитація"],
+    date: "2025-06-20 19:00:00",
+  },
+  {
+    id: 4,
+    title: "Інтенсивне тренування HIIT",
+    src: "https://images.pexels.com/photos/4753893/pexels-photo-4753893.jpeg",
+    categories: ["HIIT", "Кардіо"],
+    date: "2025-06-25 17:00:00",
+  },
+  {
+    id: 5,
+    title: "Розтяжка та гнучкість для початківців",
+    src: "https://images.pexels.com/photos/4056723/pexels-photo-4056723.jpeg",
+    categories: ["Розтяжка", "Гнучкість"],
+    date: "2025-06-30 10:00:00",
+  },
+  {
+    id: 6,
+    title: "Функціональне тренування для витривалості",
+    src: "https://images.pexels.com/photos/1552249/pexels-photo-1552249.jpeg",
+    categories: ["Функціональне тренування", "Сила"],
+    date: "2025-07-05 16:00:00",
+  },
+  {
+    id: 7,
+    title: "Плавання для розвитку витривалості",
+    src: "https://images.pexels.com/photos/1263349/pexels-photo-1263349.jpeg",
+    categories: ["Плавання", "Кардіо"],
+    date: "2025-07-10 07:30:00",
   },
 ];
 
@@ -1102,68 +1153,68 @@ export const eventsData = [
   },
 ];
 
-export const announcementsData = [
-  {
-    id: 1,
-    title: "About 4A Math Test",
-    class: "4A",
-    date: "2025-01-01",
-  },
-  {
-    id: 2,
-    title: "About 3A Math Test",
-    class: "3A",
-    date: "2025-01-01",
-  },
-  {
-    id: 3,
-    title: "About 3B Math Test",
-    class: "3B",
-    date: "2025-01-01",
-  },
-  {
-    id: 4,
-    title: "About 6A Math Test",
-    class: "6A",
-    date: "2025-01-01",
-  },
-  {
-    id: 5,
-    title: "About 8C Math Test",
-    class: "8C",
-    date: "2025-01-01",
-  },
-  {
-    id: 6,
-    title: "About 2A Math Test",
-    class: "2A",
-    date: "2025-01-01",
-  },
-  {
-    id: 7,
-    title: "About 4C Math Test",
-    class: "4C",
-    date: "2025-01-01",
-  },
-  {
-    id: 8,
-    title: "About 4B Math Test",
-    class: "4B",
-    date: "2025-01-01",
-  },
-  {
-    id: 9,
-    title: "About 3C Math Test",
-    class: "3C",
-    date: "2025-01-01",
-  },
-  {
-    id: 10,
-    title: "About 1C Math Test",
-    class: "1C",
-    date: "2025-01-01",
-  },
-];
+// export const announcementsData = [
+//   {
+//     id: 1,
+//     title: "About 4A Math Test",
+//     class: "4A",
+//     date: "2025-01-01",
+//   },
+//   {
+//     id: 2,
+//     title: "About 3A Math Test",
+//     class: "3A",
+//     date: "2025-01-01",
+//   },
+//   {
+//     id: 3,
+//     title: "About 3B Math Test",
+//     class: "3B",
+//     date: "2025-01-01",
+//   },
+//   {
+//     id: 4,
+//     title: "About 6A Math Test",
+//     class: "6A",
+//     date: "2025-01-01",
+//   },
+//   {
+//     id: 5,
+//     title: "About 8C Math Test",
+//     class: "8C",
+//     date: "2025-01-01",
+//   },
+//   {
+//     id: 6,
+//     title: "About 2A Math Test",
+//     class: "2A",
+//     date: "2025-01-01",
+//   },
+//   {
+//     id: 7,
+//     title: "About 4C Math Test",
+//     class: "4C",
+//     date: "2025-01-01",
+//   },
+//   {
+//     id: 8,
+//     title: "About 4B Math Test",
+//     class: "4B",
+//     date: "2025-01-01",
+//   },
+//   {
+//     id: 9,
+//     title: "About 3C Math Test",
+//     class: "3C",
+//     date: "2025-01-01",
+//   },
+//   {
+//     id: 10,
+//     title: "About 1C Math Test",
+//     class: "1C",
+//     date: "2025-01-01",
+//   },
+// ];
 
 // YOU SHOULD CHANGE THE DATES OF THE EVENTS TO THE CURRENT DATE TO SEE THE EVENTS ON THE CALENDAR
 // export const calendarEvents = [
