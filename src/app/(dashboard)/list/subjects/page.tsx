@@ -97,7 +97,7 @@ const SubjectsPage = () => {
         <Table columns={columns} renderRow={renderRow} data={subjectsData} />
         {/* PAGINATION */}
         <Pagination />
-      </div>{" "}
+      </div>
       {/* CHART */}
       <div className="p-4">
         <ProcentageChart />

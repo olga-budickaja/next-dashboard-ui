@@ -57,7 +57,7 @@ const menuItems = [
       },
       {
         icon: "/announcement.png",
-        label: "Блог",
+        label: "Анонси",
         href: "/list/announcements",
         visible: ["admin", "trainer", "trainable"],
       },

@@ -1,9 +1,9 @@
-const Video = ({ src }: { src: string }) => {
+const Video = ({ src, hight }: { src: string; hight: string }) => {
   return (
     <div className="">
       <iframe
         width="100%"
-        height="315"
+        height={hight}
         src={src}
         title="YouTube video player"
         frameBorder="0"
