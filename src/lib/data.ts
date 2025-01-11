@@ -1374,3 +1374,51 @@ export const trainingsCalendarEvents = [
     end: new Date(2025, 0, 11, 8, 40, 0),
   },
 ];
+
+export const videosData = [
+  {
+    id: 1,
+    src: "https://www.youtube.com/embed/k3Vfj-e1Ma4?si=XvYKf9czmQ_Pm0kv&amp;controls=0",
+    userIds: [1, 2, 3]
+  },
+  {
+    id: 2,
+    src: "https://www.youtube.com/embed/k3Vfj-e1Ma4?si=XvYKf9czmQ_Pm0kv&amp;controls=0",
+    userIds: [1, 2, 3]
+  },
+  {
+    id: 3,
+    src: "https://www.youtube.com/embed/k3Vfj-e1Ma4?si=XvYKf9czmQ_Pm0kv&amp;controls=0",
+    userIds: [1, 2, 3]
+  },
+  {
+    id: 4,
+    src: "https://www.youtube.com/embed/k3Vfj-e1Ma4?si=XvYKf9czmQ_Pm0kv&amp;controls=0",
+    userIds: [1, 2, 3]
+  },
+  {
+    id: 5,
+    src: "https://www.youtube.com/embed/k3Vfj-e1Ma4?si=XvYKf9czmQ_Pm0kv&amp;controls=0",
+    userIds: [1, 2, 3]
+  },
+  {
+    id: 6,
+    src: "https://www.youtube.com/embed/k3Vfj-e1Ma4?si=XvYKf9czmQ_Pm0kv&amp;controls=0",
+    userIds: [1, 2, 3]
+  },
+  {
+    id: 7,
+    src: "https://www.youtube.com/embed/k3Vfj-e1Ma4?si=XvYKf9czmQ_Pm0kv&amp;controls=0",
+    userIds: [1, 2, 3]
+  },
+  {
+    id: 8,
+    src: "https://www.youtube.com/embed/k3Vfj-e1Ma4?si=XvYKf9czmQ_Pm0kv&amp;controls=0",
+    userIds: [1, 2, 3]
+  },
+  {
+    id: 9,
+    src: "https://www.youtube.com/embed/k3Vfj-e1Ma4?si=XvYKf9czmQ_Pm0kv&amp;controls=0",
+    userIds: [1, 2, 3]
+  },
+];

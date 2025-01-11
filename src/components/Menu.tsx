@@ -52,7 +52,7 @@ const menuItems = [
       {
         icon: "/feedback.png",
         label: "Зворотній Дзвінок",
-        href: "/list/messages",
+        href: "/list/feedback",
         visible: ["admin", "trainer"],
       },
       {

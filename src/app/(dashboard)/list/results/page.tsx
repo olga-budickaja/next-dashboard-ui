@@ -33,7 +33,7 @@ const columns = [
     className: "hidden md:table-cell",
   },
   {
-    header: "Вага",
+    header: "Вага, кг",
     accessor: "startWeight",
     className: "hidden md:table-cell",
   },
@@ -43,17 +43,17 @@ const columns = [
     className: "hidden md:table-cell",
   },
   {
-    header: "Вага",
+    header: "Вага, кг",
     accessor: "endWeight",
     className: "hidden md:table-cell",
   },
   {
-    header: "Кількість днів",
+    header: "Днів",
     accessor: "numberDays",
     className: "hidden md:table-cell",
   },
   {
-    header: "Кількість кг",
+    header: "Кг",
     accessor: "numberKg",
   },
   { header: "Дії", accessor: "action" },
@@ -64,7 +64,7 @@ const renderRow = (item: result) => (
     key={item.id}
     className="border-b border-gray-200 even:bg-slate-50 text-sm hover:bg-buddaPurpleLight"
   >
-    <td className="flex items-center gap-4 p-4">
+    <td className="xl:flex items-center gap-4 p-4">
       <Image
         src={item.photo ? item.photo : "/avatar.png"}
         alt={item.name}
@@ -85,7 +85,7 @@ const renderRow = (item: result) => (
     <td className="hidden md:table-cell">{item?.endDate}</td>
     <td className="hidden md:table-cell">{item?.endWeight}</td>
     <td className="hidden md:table-cell">{item?.numberDays}</td>
-    <td className="hidden md:table-cell">{item?.numberKg}</td>
+    <td>{item?.numberKg}</td>
     <td>
       <div className="flex items-center gap-2">
         <Link href={`/list/trainables/${item.id}`}>
