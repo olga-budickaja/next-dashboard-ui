@@ -1,21 +1,23 @@
 import Pagination from "@/components/Pagination";
 import Table from "@/components/Table";
 import TableSearch from "@/components/TableSearch";
-import { role, trainablesData } from "@/lib/data";
+import { resultsData, role } from "@/lib/data";
 import Image from "next/image";
 import Link from "next/link";
 
-type trainable = {
+type result = {
   id: number;
-  trainableId: string;
+  resultId: string;
   name: string;
   shortName?: string;
-  email?: string;
-  phone: string;
-  telegram?: string;
-  whatsapp?: string;
   photo?: string;
   subjects?: string[];
+  startWeight?: string;
+  endWeight?: string;
+  startDate?: string;
+  endDate?: string;
+  numberDays?: string;
+  numberKg?: string;
 };
 
 const columns = [
@@ -26,25 +28,38 @@ const columns = [
     className: "hidden md:table-cell",
   },
   {
-    header: "Email",
-    accessor: "email",
-    className: "hidden md:table-cell",
-  },
-  { header: "Телефон", accessor: "phone", className: "hidden lg:table-cell" },
-  {
-    header: "WhatsApp",
-    accessor: "whatsapp",
+    header: "Початок",
+    accessor: "startDate",
     className: "hidden md:table-cell",
   },
   {
-    header: "Telegram",
-    accessor: "telegram",
+    header: "Вага",
+    accessor: "startWeight",
     className: "hidden md:table-cell",
+  },
+  {
+    header: "Кінець",
+    accessor: "endDate",
+    className: "hidden md:table-cell",
+  },
+  {
+    header: "Вага",
+    accessor: "endWeight",
+    className: "hidden md:table-cell",
+  },
+  {
+    header: "Кількість днів",
+    accessor: "numberDays",
+    className: "hidden md:table-cell",
+  },
+  {
+    header: "Кількість кг",
+    accessor: "numberKg",
   },
   { header: "Дії", accessor: "action" },
 ];
 
-const renderRow = (item: trainable) => (
+const renderRow = (item: result) => (
   <tr
     key={item.id}
     className="border-b border-gray-200 even:bg-slate-50 text-sm hover:bg-buddaPurpleLight"
@@ -65,10 +80,12 @@ const renderRow = (item: trainable) => (
     <td className="hidden md:table-cell">
       {item.subjects ? item?.subjects.join(",") : []}
     </td>
-    <td className="hidden md:table-cell">{item?.email}</td>
-    <td className="hidden md:table-cell">{item?.phone}</td>
-    <td className="hidden md:table-cell">{item?.telegram}</td>
-    <td className="hidden md:table-cell">{item?.whatsapp}</td>
+    <td className="hidden md:table-cell">{item?.startDate}</td>
+    <td className="hidden md:table-cell">{item?.startWeight}</td>
+    <td className="hidden md:table-cell">{item?.endDate}</td>
+    <td className="hidden md:table-cell">{item?.endWeight}</td>
+    <td className="hidden md:table-cell">{item?.numberDays}</td>
+    <td className="hidden md:table-cell">{item?.numberKg}</td>
     <td>
       <div className="flex items-center gap-2">
         <Link href={`/list/trainables/${item.id}`}>
@@ -86,7 +103,7 @@ const renderRow = (item: trainable) => (
   </tr>
 );
 
-const TrainablesPage = () => {
+const ResultsPage = () => {
   return (
     <div className="bg-white p-4 rounded-xl flex-1 m-4 mt-0">
       {/* TOP */}
@@ -108,11 +125,11 @@ const TrainablesPage = () => {
         </div>
       </div>
       {/* LIST */}
-      <Table columns={columns} renderRow={renderRow} data={trainablesData} />
+      <Table columns={columns} renderRow={renderRow} data={resultsData} />
       {/* PAGINATION */}
       <Pagination />
     </div>
   );
 };
 
-export default TrainablesPage;
+export default ResultsPage;

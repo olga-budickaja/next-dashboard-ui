@@ -82,7 +82,7 @@ const ProcentageChart = () => {
             </Pie>
           </PieChart>
         </ResponsiveContainer>
-        <div className="absolute md:top-[40px] bottom-0 flex  md:flex-col justify-center gap-4">
+        <div className="absolute md:top-0 bottom-0 flex  md:flex-col justify-center gap-4">
           <div className="flex flex-col gap-1">
             <div className="w-5 h-5 bg-buddaYellow rounded-full"></div>
             <h2 className="font-bold">Training1</h2>
