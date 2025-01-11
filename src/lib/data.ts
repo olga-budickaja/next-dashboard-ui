@@ -149,7 +149,7 @@ export const resultsData = [
     startDate: "10.12.2024",
     endDate: "10.01.2025",
     numberDays: "31",
-    numberKg: "10"
+    numberKg: "10",
   },
   {
     id: 2,
@@ -164,7 +164,7 @@ export const resultsData = [
     startDate: "10.12.2024",
     endDate: "10.01.2025",
     numberDays: "31",
-    numberKg: "10"
+    numberKg: "10",
   },
   {
     id: 3,
@@ -179,7 +179,7 @@ export const resultsData = [
     startDate: "10.12.2024",
     endDate: "10.01.2025",
     numberDays: "31",
-    numberKg: "10"
+    numberKg: "10",
   },
   {
     id: 4,
@@ -194,7 +194,7 @@ export const resultsData = [
     startDate: "10.12.2024",
     endDate: "10.01.2025",
     numberDays: "31",
-    numberKg: "10"
+    numberKg: "10",
   },
   {
     id: 5,
@@ -209,7 +209,7 @@ export const resultsData = [
     startDate: "10.12.2024",
     endDate: "10.01.2025",
     numberDays: "31",
-    numberKg: "10"
+    numberKg: "10",
   },
   {
     id: 6,
@@ -224,7 +224,7 @@ export const resultsData = [
     startDate: "10.12.2024",
     endDate: "10.01.2025",
     numberDays: "31",
-    numberKg: "10"
+    numberKg: "10",
   },
   {
     id: 7,
@@ -239,7 +239,7 @@ export const resultsData = [
     startDate: "10.12.2024",
     endDate: "10.01.2025",
     numberDays: "31",
-    numberKg: "10"
+    numberKg: "10",
   },
   {
     id: 8,
@@ -254,7 +254,7 @@ export const resultsData = [
     startDate: "10.12.2024",
     endDate: "10.01.2025",
     numberDays: "31",
-    numberKg: "10"
+    numberKg: "10",
   },
   {
     id: 9,
@@ -269,7 +269,7 @@ export const resultsData = [
     startDate: "10.12.2024",
     endDate: "10.01.2025",
     numberDays: "31",
-    numberKg: "10"
+    numberKg: "10",
   },
   {
     id: 10,
@@ -284,7 +284,7 @@ export const resultsData = [
     startDate: "10.12.2024",
     endDate: "10.01.2025",
     numberDays: "31",
-    numberKg: "10"
+    numberKg: "10",
   },
 ];
 
@@ -525,6 +525,45 @@ export const subjectsData = [
     bought: "10",
     price: "800 грн.",
     salePrice: "390 грн.",
+  },
+];
+
+export const feedbackData = [
+  {
+    id: 1,
+    name: "Jonh Doe",
+    phone: "+38(095)-999-99-99",
+    communication: "telegram",
+    date: "11.01.2025",
+    time: "13:57",
+    call: false,
+  },
+  {
+    id: 2,
+    name: "Ira",
+    phone: "+38(095)-999-99-99",
+    communication: "whatsapp",
+    date: "11.01.2025",
+    time: "13:57",
+    call: true,
+  },
+  {
+    id: 3,
+    name: "Nastja",
+    phone: "+38(095)-999-99-99",
+    communication: "phone",
+    date: "11.01.2025",
+    time: "13:57",
+    call: false,
+  },
+  {
+    id: 1,
+    name: "Kyryl",
+    phone: "+38(095)-999-99-99",
+    communication: "viber",
+    date: "11.01.2025",
+    time: "13:57",
+    call: true,
   },
 ];
 
@@ -1379,46 +1418,46 @@ export const videosData = [
   {
     id: 1,
     src: "https://www.youtube.com/embed/k3Vfj-e1Ma4?si=XvYKf9czmQ_Pm0kv&amp;controls=0",
-    userIds: [1, 2, 3]
+    userIds: [1, 2, 3],
   },
   {
     id: 2,
     src: "https://www.youtube.com/embed/k3Vfj-e1Ma4?si=XvYKf9czmQ_Pm0kv&amp;controls=0",
-    userIds: [1, 2, 3]
+    userIds: [1, 2, 3],
   },
   {
     id: 3,
     src: "https://www.youtube.com/embed/k3Vfj-e1Ma4?si=XvYKf9czmQ_Pm0kv&amp;controls=0",
-    userIds: [1, 2, 3]
+    userIds: [1, 2, 3],
   },
   {
     id: 4,
     src: "https://www.youtube.com/embed/k3Vfj-e1Ma4?si=XvYKf9czmQ_Pm0kv&amp;controls=0",
-    userIds: [1, 2, 3]
+    userIds: [1, 2, 3],
   },
   {
     id: 5,
     src: "https://www.youtube.com/embed/k3Vfj-e1Ma4?si=XvYKf9czmQ_Pm0kv&amp;controls=0",
-    userIds: [1, 2, 3]
+    userIds: [1, 2, 3],
   },
   {
     id: 6,
     src: "https://www.youtube.com/embed/k3Vfj-e1Ma4?si=XvYKf9czmQ_Pm0kv&amp;controls=0",
-    userIds: [1, 2, 3]
+    userIds: [1, 2, 3],
   },
   {
     id: 7,
     src: "https://www.youtube.com/embed/k3Vfj-e1Ma4?si=XvYKf9czmQ_Pm0kv&amp;controls=0",
-    userIds: [1, 2, 3]
+    userIds: [1, 2, 3],
   },
   {
     id: 8,
     src: "https://www.youtube.com/embed/k3Vfj-e1Ma4?si=XvYKf9czmQ_Pm0kv&amp;controls=0",
-    userIds: [1, 2, 3]
+    userIds: [1, 2, 3],
   },
   {
     id: 9,
     src: "https://www.youtube.com/embed/k3Vfj-e1Ma4?si=XvYKf9czmQ_Pm0kv&amp;controls=0",
-    userIds: [1, 2, 3]
+    userIds: [1, 2, 3],
   },
 ];
