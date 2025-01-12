@@ -1,7 +1,8 @@
 import Announcement from "@/components/Announcement";
+import FormModal from "@/components/FormModal";
 import Pagination from "@/components/Pagination";
 import TableSearch from "@/components/TableSearch";
-import { announcementsData } from "@/lib/data";
+import { announcementsData, role } from "@/lib/data";
 import Image from "next/image";
 
 type announcement = {
@@ -30,9 +31,7 @@ const AnnouncementsPage = () => {
             <button className="w-8 h-8 flex items-center justify-center rounded-full bg-buddaYellow">
               <Image src="/sort.png" alt="Сортування" width={14} height={14} />
             </button>
-            <button className="w-8 h-8 flex items-center justify-center rounded-full bg-buddaYellow">
-              <Image src="/plus.png" alt="Додати" width={14} height={14} />
-            </button>
+            {role === "admin" && <FormModal table="announsements" type="create" />}
           </div>
         </div>
       </div>

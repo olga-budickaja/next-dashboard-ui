@@ -7,6 +7,8 @@ import ReactTimeAgo from "react-time-ago";
 import { parseISO } from "date-fns";
 import uk from "javascript-time-ago/locale/uk";
 import Link from "next/link";
+import FormModal from "./FormModal";
+import { role } from "@/lib/data";
 
 TimeAgo.addLocale(uk);
 
@@ -50,7 +52,8 @@ const Announcement = ({
       />
       <div className="absolute inset-0 flex flex-col justify-between p-8">
         {/* TOP */}
-        <div className="flex gap-2">
+        <div className='flex items-center justify-between'>
+                  <div className="flex gap-2">
           {item.categories.map((cat, idx) => (
             <span
               key={idx}
@@ -60,6 +63,14 @@ const Announcement = ({
             </span>
           ))}
         </div>
+
+        {role === "admin" &&
+        <div className="flex items-center gap-4">
+          <FormModal table="announsements" type="update" data={item} />
+          <FormModal table="announsements" type="delete" id={item.id} />
+          </div> }
+        </div>
+
         {/* BOTTOM */}
         <div className="flex flex-col gap-2">
           <h2 className="text-[24px] text-white text-bold uppercase">

@@ -1,3 +1,4 @@
+import FormModal from "@/components/FormModal";
 import Pagination from "@/components/Pagination";
 import Table from "@/components/Table";
 import TableSearch from "@/components/TableSearch";
@@ -77,9 +78,10 @@ const renderRow = (item: trainable) => (
           </button>
         </Link>
         {role === "admin" && (
-          <button className="w-7 h-7 flex items-center justify-center rounded-full bg-buddaPurple">
-            <Image src="/delete.png" alt="Видалити" width={16} height={16} />
-          </button>
+          <>
+            <FormModal table="trainables" type="update" data={item} />
+            <FormModal table="trainables" type="delete" id={item.id} />
+          </>
         )}
       </div>
     </td>
@@ -101,9 +103,7 @@ const TrainablesPage = () => {
             <button className="w-8 h-8 flex items-center justify-center rounded-full bg-buddaYellow">
               <Image src="/sort.png" alt="Сортування" width={14} height={14} />
             </button>
-            <button className="w-8 h-8 flex items-center justify-center rounded-full bg-buddaYellow">
-              <Image src="/plus.png" alt="Додати" width={14} height={14} />
-            </button>
+            <FormModal table="trainables" type="create" />
           </div>
         </div>
       </div>
