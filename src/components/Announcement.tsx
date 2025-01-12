@@ -37,58 +37,56 @@ const Announcement = ({
   }
 
   return (
-    <Link
-      href={item.link}
-      className="w-full md:w-[calc(50%-2rem)] h-[400px] relative m-[1rem]"
-    >
-      <Image
-        className="relative brightness-50 rounded-md"
-        src={item.src}
-        alt={item.title}
-        fill
-        style={{ objectFit: "cover" }}
-        sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 33vw"
-        priority
-      />
-      <div className="absolute inset-0 flex flex-col justify-between p-8">
-        {/* TOP */}
-        <div className='flex items-center justify-between'>
-                  <div className="flex gap-2">
-          {item.categories.map((cat, idx) => (
-            <span
-              key={idx}
-              className="bg-buddaYellow px-2 py-1 text-sm text-gray-800"
-            >
-              {cat}
-            </span>
-          ))}
-        </div>
+    <div className="w-full md:w-[calc(50%-2rem)] h-[400px] relative m-[1rem]">
+      <Link href={item.link}>
+        <Image
+          className="relative brightness-50 rounded-md"
+          src={item.src}
+          alt={item.title}
+          fill
+          style={{ objectFit: "cover" }}
+          sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 33vw"
+          priority
+        />
+        <div className="absolute inset-0 flex flex-col justify-between p-8">
+          {/* TOP */}
 
-        {role === "admin" &&
-        <div className="flex items-center gap-4">
-          <FormModal table="announsements" type="update" data={item} />
-          <FormModal table="announsements" type="delete" id={item.id} />
-          </div> }
-        </div>
+          <div className="flex gap-2">
+            {item.categories.map((cat, idx) => (
+              <span
+                key={idx}
+                className="bg-buddaYellow px-2 py-1 text-sm text-gray-800"
+              >
+                {cat}
+              </span>
+            ))}
+          </div>
 
-        {/* BOTTOM */}
-        <div className="flex flex-col gap-2">
-          <h2 className="text-[24px] text-white text-bold uppercase">
-            {item.title}
-          </h2>
-          <div className="flex items-center gap-2">
-            <Image
-              src="/clock.png"
-              alt="Clock"
-              width={20}
-              height={20}
-              priority
-            />
-            <ReactTimeAgo date={date} locale="uk" style={{ color: "#fff" }} />
+          {/* BOTTOM */}
+          <div className="flex flex-col gap-2">
+            <h2 className="text-[24px] text-white text-bold uppercase">
+              {item.title}
+            </h2>
+            <div className="flex items-center gap-2">
+              <Image
+                src="/clock.png"
+                alt="Clock"
+                width={20}
+                height={20}
+                priority
+              />
+              <ReactTimeAgo date={date} locale="uk" style={{ color: "#fff" }} />
+            </div>
           </div>
         </div>
-      </div>
-    </Link>
+      </Link>
+      {role === "admin" && (
+        <div className="absolute top-8 right-8 flex items-center gap-4">
+          <FormModal table="announsements" type="update" data={item} />
+          <FormModal table="announsements" type="delete" id={item.id} />
+        </div>
+      )}
+    </div>
   );
 };
 
