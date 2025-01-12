@@ -6,6 +6,7 @@ import TimeAgo from "javascript-time-ago";
 import ReactTimeAgo from "react-time-ago";
 import { parseISO } from "date-fns";
 import uk from "javascript-time-ago/locale/uk";
+import Link from "next/link";
 
 TimeAgo.addLocale(uk);
 
@@ -18,6 +19,7 @@ const Announcement = ({
     src: string;
     categories: string[];
     date: string;
+    link: string;
   };
 }) => {
   const [date, setDate] = useState<Date | null>(null);
@@ -33,7 +35,10 @@ const Announcement = ({
   }
 
   return (
-    <div className="w-full md:w-[calc(50%-2rem)] h-[400px] relative m-[1rem]">
+    <Link
+      href={item.link}
+      className="w-full md:w-[calc(50%-2rem)] h-[400px] relative m-[1rem]"
+    >
       <Image
         className="relative brightness-50 rounded-md"
         src={item.src}
@@ -72,7 +77,7 @@ const Announcement = ({
           </div>
         </div>
       </div>
-    </div>
+    </Link>
   );
 };
 

@@ -9,7 +9,8 @@ type announcement = {
   title: string;
   src: string;
   categories: string[];
-  date: Date;
+  date: string;
+  link: string;
 };
 
 const AnnouncementsPage = () => {

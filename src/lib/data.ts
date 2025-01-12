@@ -288,6 +288,39 @@ export const resultsData = [
   },
 ];
 
+export const weightData = [
+  { date: "1.01", meaning: 98.3 },
+  { date: "2.01", meaning: 98 },
+  { date: "3.01", meaning: 97.5 },
+  { date: "4.01" },
+  { date: "5.01", meaning: 97 },
+  { date: "6.01", meaning: 96.5 },
+  { date: "7.01", meaning: 96.7 },
+  { date: "8.01", meaning: 96.3 },
+  { date: "9.01", meaning: 94 },
+  { date: "10.01", meaning: 92 },
+  { date: "11.01", meaning: 98.3 },
+  { date: "12.01", meaning: 98 },
+  { date: "13.01", meaning: 97.5 },
+  { date: "14.01" },
+  { date: "15.01", meaning: 97 },
+  { date: "16.01", meaning: 96.5 },
+  { date: "17.01", meaning: 96.7 },
+  { date: "18.01", meaning: 96.3 },
+  { date: "19.01", meaning: 94 },
+  { date: "20.01", meaning: 92 },
+  { date: "21.01", meaning: 98.3 },
+  { date: "22.01", meaning: 98 },
+  { date: "23.01", meaning: 97.5 },
+  { date: "24.01" },
+  { date: "25.01", meaning: 97 },
+  { date: "26.01", meaning: 96.5 },
+  { date: "27.01", meaning: 96.7 },
+  { date: "28.01", meaning: 96.3 },
+  { date: "29.01", meaning: 94 },
+  { date: "30.01", meaning: 92 },
+];
+
 // export const studentsData = [
 //   {
 //     id: 1,
@@ -640,6 +673,7 @@ export const announcementsData = [
     src: "https://images.pexels.com/photos/3757371/pexels-photo-3757371.jpeg",
     categories: ["Кардіо", "Ранкові тренування"],
     date: "2025-01-10 08:00:00",
+    link: "http://localhost:3000/",
   },
   {
     id: 2,
@@ -647,6 +681,7 @@ export const announcementsData = [
     src: "https://images.pexels.com/photos/2261485/pexels-photo-2261485.jpeg",
     categories: ["Силові тренування", "Здоров'я"],
     date: "2025-06-15 18:30:00",
+    link: "http://localhost:3000/",
   },
   {
     id: 3,
@@ -654,6 +689,7 @@ export const announcementsData = [
     src: "https://images.pexels.com/photos/3823039/pexels-photo-3823039.jpeg",
     categories: ["Йога", "Медитація"],
     date: "2025-06-20 19:00:00",
+    link: "http://localhost:3000/",
   },
   {
     id: 4,
@@ -661,6 +697,7 @@ export const announcementsData = [
     src: "https://images.pexels.com/photos/4753893/pexels-photo-4753893.jpeg",
     categories: ["HIIT", "Кардіо"],
     date: "2025-06-25 17:00:00",
+    link: "http://localhost:3000/",
   },
   {
     id: 5,
@@ -668,6 +705,7 @@ export const announcementsData = [
     src: "https://images.pexels.com/photos/4056723/pexels-photo-4056723.jpeg",
     categories: ["Розтяжка", "Гнучкість"],
     date: "2025-06-30 10:00:00",
+    link: "http://localhost:3000/",
   },
   {
     id: 6,
@@ -675,6 +713,7 @@ export const announcementsData = [
     src: "https://images.pexels.com/photos/1552249/pexels-photo-1552249.jpeg",
     categories: ["Функціональне тренування", "Сила"],
     date: "2025-07-05 16:00:00",
+    link: "http://localhost:3000/",
   },
   {
     id: 7,
@@ -682,6 +721,7 @@ export const announcementsData = [
     src: "https://images.pexels.com/photos/1263349/pexels-photo-1263349.jpeg",
     categories: ["Плавання", "Кардіо"],
     date: "2025-07-10 07:30:00",
+    link: "http://localhost:3000/",
   },
 ];
 
@@ -1363,63 +1403,63 @@ export const eventsData = [
 // ];
 export const calendarEvents = [
   {
-    title: "Вг: 70 кг\nКл: 2000\n",
+    title: "Вг: 70 кг\nКл: 2000\nОб: 104см",
     allDay: true,
     start: new Date(2025, 0, 6), // 1 січня 2025
     end: new Date(2025, 0, 6),
     weight: 69.2,
   },
   {
-    title: "Вг: 69.8 кг\nКл: 2100\n",
+    title: "Вг: 69.8 кг\nКл: 2100\nОб: 103см",
     allDay: true,
     start: new Date(2025, 0, 7), // 2 січня 2025
     end: new Date(2025, 0, 7),
     weight: 69.2,
   },
   {
-    title: "Вг: 69.6 кг\nКл: 1950\n",
+    title: "Вг: 69.6 кг\nКл: 1950\nОб: 102см",
     allDay: true,
     start: new Date(2025, 0, 8), // 3 січня 2025
     end: new Date(2025, 0, 8),
     weight: 69.2,
   },
   {
-    title: "Вг: 69.5 кг\nКл: 1800",
+    title: "Вг: 69.5 кг\nКл: 1800\nОб: 101см",
     allDay: true,
     start: new Date(2025, 0, 9), // 4 січня 2025
     end: new Date(2025, 0, 9),
     weight: 69.2,
   },
   {
-    title: "Вг: 69.3 кг\nКл: 2200",
+    title: "Вг: 69.3 кг\nКл: 2200\nОб: 100см",
     allDay: true,
     start: new Date(2025, 0, 10), // 5 січня 2025
     end: new Date(2025, 0, 10),
     weight: 99.2,
   },
   {
-    title: "Вг: 69.2 кг\nКл: 1900",
+    title: "Вг: 69.2 кг\nКл: 1900\nОб: 99см",
     allDay: true,
     start: new Date(2025, 0, 11), // 6 січня 2025
     end: new Date(2025, 0, 11),
     weight: 69.2,
   },
   {
-    title: "Вг: 69.0 кг\nКл: 2000",
+    title: "Вг: 69.0 кг\nКл: 2000\nОб: 98см",
     allDay: true,
     start: new Date(2025, 0, 12), // 7 січня 2025
     end: new Date(2025, 0, 12),
     weight: 85.2,
   },
   {
-    title: "Вг: 68.8 кг\nКл: 1850",
+    title: "Вг: 68.8 кг\nКл: 1850\nОб: 98см",
     allDay: true,
     start: new Date(2025, 0, 13), // 8 січня 2025
     end: new Date(2025, 0, 13),
     weight: 69.2,
   },
   {
-    title: "Вг: 68.7 кг\nКл: 1950",
+    title: "Вг: 68.7 кг\nКл: 1950\nОб: 98см",
     allDay: true,
     start: new Date(2025, 0, 14), // 9 січня 2025
     end: new Date(2025, 0, 14),
@@ -1540,7 +1580,7 @@ export const videosData = [
   },
   {
     id: 2,
-    src: "https://www.youtube.com/embed/k3Vfj-e1Ma4?si=XvYKf9czmQ_Pm0kv&amp;controls=0",
+    src: "https://www.youtube.com/embed/7WwtzsSHdpI?si=KsEtNt1lpVD2J1bo&amp;controls=0",
     userIds: [1, 2, 3],
   },
   {

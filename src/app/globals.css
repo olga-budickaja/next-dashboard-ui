@@ -2,6 +2,27 @@
 @tailwind components;
 @tailwind utilities;
 
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*::-webkit-scrollbar {
+  width: 3px;
+}
+
+*::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.2);
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--bgLight);
+  outline: 1px solid var(--bgLight);
+}
+
 .react-calendar {
   width: 100% !important;
   border: none !important;
@@ -39,6 +60,7 @@
 }
 .rbc-time-content {
   border-top: none !important;
+  width: 100% !important;
 }
 .rbc-time-gutter.rbc-time-column {
   font-size: 12px !important;
@@ -69,9 +91,6 @@
 .rbc-row-segment .rbc-event-content {
   white-space: pre-wrap !important;
 }
-.rbc-time-content {
-  overflow: hidden !important;
-}
 .rbc-time-content > * + * > * {
   border-left: 1px dashed #ddd !important;
 }
@@ -83,7 +102,6 @@
   margin-bottom: 5px !important;
 }
 
-/* Стиль для інтервалів часу */
 .rbc-time-column {
   height: auto !important;
 }
