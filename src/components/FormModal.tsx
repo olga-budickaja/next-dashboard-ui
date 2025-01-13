@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useState } from "react";
+import TrainableForm from "./forms/TrainableForm";
 
 const FormModal = ({
   table,
@@ -55,7 +56,7 @@ const FormModal = ({
         </button>
       </form>
     ) : (
-      "create or update form"
+      <TrainableForm type="create" />
     );
   };
 
@@ -69,7 +70,7 @@ const FormModal = ({
       </button>
       {open && (
         <div className="w-screen h-screen fixed top-0 left-0 bg-black bg-opacity-60 z-50 flex items-center justify-center">
-          <div className="bg-white p-4 rounded-md relative w-[90%] md:w-[70%] lg:w-[60%] xl:w-[50%] 2xl:w-[40%]">
+          <div className="bg-white p-4 rounded-md relative w-[90%] md:w-[70%] lg:w-[60%] xl:w-[50%] 2xl:w-[40%] overflow-auto max-h-[80vh]">
             <Form />
             <div
               className="absolute top-4 right-4 cursor-pointer"
