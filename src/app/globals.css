@@ -9,7 +9,7 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+/* SCROLL */
 *::-webkit-scrollbar {
   width: 3px;
 }
@@ -22,7 +22,7 @@
   background-color: var(--bgLight);
   outline: 1px solid var(--bgLight);
 }
-
+/* CALENDAR */
 .react-calendar {
   width: 100% !important;
   border: none !important;

@@ -1,8 +1,18 @@
 "use client";
 
+import dynamic from "next/dynamic";
 import Image from "next/image";
 import { useState } from "react";
-import TrainableForm from "./forms/TrainableForm";
+
+const TrainableForm = dynamic(() => import("./forms/TrainableForm"), {
+  loading: () => <h1>Завантаження...</h1>
+});
+
+const forms: {
+  [key: string]: (type: "create" | "update", data?: any) => JSX.Element;
+} = {
+  trainables: (type, data) => <TrainableForm type={type} data={data} />,
+};
 
 const FormModal = ({
   table,
@@ -55,8 +65,10 @@ const FormModal = ({
           Видалити
         </button>
       </form>
+    ) : type === "create" || type === "update" ? (
+      forms[table](type, data)
     ) : (
-      <TrainableForm type="create" />
+      "Форму не знайдено!"
     );
   };
 

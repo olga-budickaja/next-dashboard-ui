@@ -1,7 +1,10 @@
 import Announcements from "@/components/Announcements";
 import BigCalendar from "@/components/BigCalendar";
+import EventCalendar from "@/components/EventCalendar";
+import FormModal from "@/components/FormModal";
 import WeightChart from "@/components/WeightChart";
 import { calendarEvents, weightData } from "@/lib/data";
+import { cleanLink } from "@/utils/general";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -13,18 +16,38 @@ const SingleTrainablePage = () => {
         {/* TOP */}
         <div className="flex flex-col lg:flex-row gap-4">
           {/* USER INFO CARD */}
-          <div className="bg-buddaSky py-6 px-4 rounded-lg flex-1 flex gap-4">
-            <div className="w-1/3">
+          <div className="bg-buddaSky py-6 px-4 rounded-lg flex-1 flex flex-col gap-4 lg:flex-row">
+            <div className="w-full lg:w-1/3 self-center lg:self-start">
               <Image
                 src="https://images.pexels.com/photos/1043474/pexels-photo-1043474.jpeg?auto=compress&cs=tinysrgb&w=1200"
                 alt="Фото JOnh Doe"
                 width={144}
                 height={144}
-                className="w-36 h-36 rounded-full object-cover"
+                className="w-36 h-36 rounded-full object-cover mr-auto ml-auto"
               />
             </div>
             <div className="w-2/3 flex flex-col justify-between gap-4">
-              <h1 className="text-lg font-semibold">Leonard Snyder</h1>
+              <div className="flex items-center justify-between">
+                <h1 className="text-lg font-semibold">Leonard Snyder</h1>
+                <FormModal
+                  table="trainables"
+                  type="update"
+                  data={{
+                    id: 1,
+                    trainableId: "1234567890",
+                    name: "John Doe",
+                    shortName: "руденька",
+                    email: "john@doe.com",
+                    photo:
+                      "https://images.pexels.com/photos/2888150/pexels-photo-2888150.jpeg?auto=compress&cs=tinysrgb&w=1200",
+                    phone: "1234567890",
+                    subjects: ["Math", "Geometry"],
+                    whatsapp: ["1B", "2A", "3C"],
+                    telegram: "123 Main St, Anytown, USA",
+                  }}
+                />
+              </div>
+
               <p className="text-sm text-gray-500">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
               </p>
@@ -48,11 +71,55 @@ const SingleTrainablePage = () => {
                     <span>some@gmail.com</span>
                   </Link>
                 </div>
-                <div className="w-full flex gap-1 items-center">
-                  <Image src="/phone.png" alt="Іконка" width={14} height={14} />
-                  <Link href="tel:+3809909909999">
-                    <span>+38(099)999-99-99</span>
-                  </Link>
+                <div className="w-full flex-col lg:flex-row items-center justify-between">
+                  <div className="w-full flex gap-1 items-center">
+                    <Image
+                      src="/phone.png"
+                      alt="Іконка"
+                      width={14}
+                      height={14}
+                    />
+                    <Link href={`tel:+${"+38(099)999-99-99"}`}>
+                      <span>+38(099)999-99-99</span>
+                    </Link>
+                  </div>
+                  <div className="w-full flex gap-1 items-center mt-6">
+                    <Link
+                      href={`https://t.me/+${cleanLink("")}`}
+                      target="_blank"
+                    >
+                      <Image
+                        src="/telegram.png"
+                        alt="Telegram"
+                        width={30}
+                        height={30}
+                      />
+                    </Link>
+                    <Link
+                      href={`https://api.whatsapp.com/send?phone=+${cleanLink(
+                        ""
+                      )}`}
+                      target="_blank"
+                    >
+                      <Image
+                        src="/whatsapp.png"
+                        alt="WhatsApp"
+                        width={30}
+                        height={30}
+                      />
+                    </Link>
+                    <Link
+                      href={`viber://chat?number=+${cleanLink("")}`}
+                      target="_blank"
+                    >
+                      <Image
+                        src="/viber.png"
+                        alt="Viber"
+                        width={30}
+                        height={30}
+                      />
+                    </Link>
+                  </div>
                 </div>
               </div>
             </div>
@@ -149,7 +216,10 @@ const SingleTrainablePage = () => {
           <WeightChart data={weightData} dataMax={90} color="#78bcd6" />
         </div>
 
-        <Announcements />
+        <div className="w-full flex flex-col gap-8">
+          <EventCalendar />
+          <Announcements />
+        </div>
       </div>
     </div>
   );

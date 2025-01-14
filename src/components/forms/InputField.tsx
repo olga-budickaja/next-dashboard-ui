@@ -33,7 +33,7 @@ const InputField = ({
         )}
       </label>
       <input
-        id={name}
+        name={name}
         type={type}
         {...register(name)}
         className="ring-1 ring-gray-300 focus:ring-2 focus:ring-blue-500 focus:outline-none p-2 rounded-md text-sm w-full"

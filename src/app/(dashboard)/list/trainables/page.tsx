@@ -3,6 +3,8 @@ import Pagination from "@/components/Pagination";
 import Table from "@/components/Table";
 import TableSearch from "@/components/TableSearch";
 import { role, trainablesData } from "@/lib/data";
+import { cleanLink } from "@/utils/general";
+import { strict } from "assert";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -17,6 +19,7 @@ type trainable = {
   whatsapp?: string;
   photo?: string;
   subjects?: string[];
+  viber?: string
 };
 
 const columns = [
@@ -33,15 +36,21 @@ const columns = [
   },
   { header: "Телефон", accessor: "phone", className: "hidden lg:table-cell" },
   {
+    header: "Telegram",
+    accessor: "telegram",
+    className: "hidden md:table-cell",
+  },
+  {
     header: "WhatsApp",
     accessor: "whatsapp",
     className: "hidden md:table-cell",
   },
   {
-    header: "Telegram",
-    accessor: "telegram",
+    header: "Viber",
+    accessor: "viber",
     className: "hidden md:table-cell",
   },
+
   { header: "Дії", accessor: "action" },
 ];
 
@@ -66,10 +75,17 @@ const renderRow = (item: trainable) => (
     <td className="hidden md:table-cell">
       {item.subjects ? item?.subjects.join(",") : []}
     </td>
-    <td className="hidden md:table-cell">{item?.email}</td>
-    <td className="hidden md:table-cell">{item?.phone}</td>
-    <td className="hidden md:table-cell">{item?.telegram}</td>
+    <td className="hidden md:table-cell">
+      <Link href={`mailto:${item.email}`}>{item?.email}</Link>
+    </td>
+    <td className="hidden md:table-cell">
+      <Link href={`tel:+${cleanLink(item.phone)}`}>{item.phone}</Link>
+    </td>
+    <td className="hidden md:table-cell">
+      <Link href={`tel:+${cleanLink(item?.telegram)}`}>{item?.telegram}</Link>
+    </td>
     <td className="hidden md:table-cell">{item?.whatsapp}</td>
+    <td className="hidden md:table-cell">{item?.viber}</td>
     <td>
       <div className="flex items-center gap-2">
         <Link href={`/list/trainables/${item.id}`}>

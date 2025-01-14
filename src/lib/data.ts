@@ -15,6 +15,7 @@ export const trainablesData = [
     subjects: ["Math", "Geometry"],
     whatsapp: ["1B", "2A", "3C"],
     telegram: "123 Main St, Anytown, USA",
+    viber: "+3809679",
   },
   {
     id: 2,
@@ -28,6 +29,7 @@ export const trainablesData = [
     subjects: ["Physics", "Chemistry"],
     whatsapp: ["5A", "4B", "3C"],
     telegram: "123 Main St, Anytown, USA",
+    viber: "",
   },
   {
     id: 3,
@@ -41,6 +43,7 @@ export const trainablesData = [
     subjects: ["Biology"],
     whatsapp: ["5A", "4B", "3C"],
     telegram: "123 Main St, Anytown, USA",
+    viber: "",
   },
   {
     id: 4,
@@ -54,6 +57,7 @@ export const trainablesData = [
     subjects: ["History"],
     whatsapp: ["5A", "4B", "3C"],
     telegram: "123 Main St, Anytown, USA",
+    viber: "+3809679",
   },
   {
     id: 5,
@@ -67,6 +71,7 @@ export const trainablesData = [
     subjects: ["Music", "History"],
     whatsapp: ["5A", "4B", "3C"],
     telegram: "123 Main St, Anytown, USA",
+    viber: "",
   },
   {
     id: 6,
@@ -80,6 +85,7 @@ export const trainablesData = [
     subjects: ["Physics"],
     whatsapp: ["5A", "4B", "3C"],
     telegram: "123 Main St, Anytown, USA",
+    viber: "",
   },
   {
     id: 7,
@@ -93,6 +99,7 @@ export const trainablesData = [
     subjects: ["English", "Spanish"],
     whatsapp: ["5A", "4B", "3C"],
     telegram: "123 Main St, Anytown, USA",
+    viber: "+3809679",
   },
   {
     id: 8,
@@ -106,6 +113,7 @@ export const trainablesData = [
     subjects: ["Math", "Geometry"],
     whatsapp: ["5A", "4B", "3C"],
     telegram: "123 Main St, Anytown, USA",
+    viber: "",
   },
   {
     id: 9,
@@ -119,6 +127,7 @@ export const trainablesData = [
     subjects: ["Literature", "English"],
     whatsapp: ["5A", "4B", "3C"],
     telegram: "123 Main St, Anytown, USA",
+    viber: "",
   },
   {
     id: 10,
@@ -132,6 +141,7 @@ export const trainablesData = [
     subjects: ["Biology"],
     whatsapp: ["5A", "4B", "3C"],
     telegram: "123 Main St, Anytown, USA",
+    viber: "",
   },
 ];
 

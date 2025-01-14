@@ -24,7 +24,7 @@ const UploadField = ({
   require,
 }: InputFieldsProps) => {
   return (
-    <div className="flex flex-col gap-2 w-full md:w-1/4">
+    <div className="flex flex-col gap-2 w-full md:w-1/4 mt-8">
       <label
         htmlFor={name}
         className="flex items-center  gap-2 text-sm text-gray-500 w-max relative gap2 cursor-pointer"
@@ -43,7 +43,7 @@ const UploadField = ({
         )}
       </label>
       <input
-        id={name}
+        name={name}
         type={type}
         {...register(name)}
         className="hidden"

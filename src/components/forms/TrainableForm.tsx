@@ -7,35 +7,59 @@ import InputField from "./InputField";
 import { role } from "@/lib/data";
 import SelectField from "./SelectField";
 import UploadField from "./UploadField";
+import PhoneField from "./PhoneField";
+import { useState } from "react";
+import Checkbox from "./Checkbox";
 
 const schema = z.object({
-  firstName: z.string().min(2, { message: "Ім`я обов`язкове для заповнення!" }),
-  lastName: z
+  firstName: z
     .string()
-    .min(2, { message: "Прізвище повинно бути не меньше 2-x символів!!" }),
-  shortName: z
+    .nonempty({ message: "Ім`я обов`язкове для заповнення!" })
+    .min(2, { message: "Ім`я повинно бути не меньше 2-x символів!" }),
+  lastName: z.preprocess(
+    (value) =>
+      typeof value === "string" && value.trim() === "" ? undefined : value,
+    z
+      .string()
+      .min(2, { message: "Прізвище повинно бути не меньше 2-x символів!!" })
+      .optional()
+  ),
+  shortName: z.preprocess(
+    (value) =>
+      typeof value === "string" && value.trim() === "" ? undefined : value,
+    z
+      .string()
+      .min(3, { message: "Ім`я повинно бути не меньше 3-х символів!" })
+      .max(20, { message: "Ім`я повинно бути не більше 20-ти символів!" })
+      .optional()
+  ),
+  email: z
     .string()
-    .min(3, { message: "Ім`я повинно бути не меньше 3-x символів!" })
-    .max(20, {
-      message: "Ім`я повинно бути не більше 20-ти символів!",
-    }),
-  email: z.string().email({ message: "Невірно введенний email!" }),
+    .nonempty({ message: "Email обов`язковий для заповнення!" })
+    .email({ message: "Невірно введенний email!" }),
   password: z
     .string()
+    .nonempty({ message: "Пароль обов`язковий для заповнення!" })
     .min(6, { message: "Пароль повинен бути не меньше 6-ти символів!" })
     .max(20, {
       message:
         "Максимальна довжина імені не повинна бути більшою за 20 символів!",
     }),
-  weight: z.number().min(2, "Вага обов`язкова для заповнення!"),
-  height: z.number().min(3, "Зріст обов`язкова для заповнення!"),
-  phone: z.number().min(3, "Номер телефону обов`язковий для заповнення!"),
-  telegram: z.number({ message: "" }),
-  viber: z.number({ message: "" }),
-  whatsapp: z.number({ message: "" }),
-  birthday: z.date({ message: "" }),
+  weight: z
+    .number({ required_error: "Вага обов`язкова для заповнення!" })
+    .min(2, "Вага не повинна бути меньша за 2 символи!"),
+  height: z
+    .number({ required_error: "Зріст обов`язковий для заповнення!" })
+    .min(2, "Зріст не повиннен бути меньшим за 3 символи!"),
+  phone: z
+    .string()
+    .nonempty({ message: "Телефон обов`язковий для заповнення!" }),
+  telegram: z.string(),
+  viber: z.string(),
+  whatsapp: z.string(),
+  birthday: z.date({ message: "День народження обов`язковий для заповнення!" }),
   img: z.instanceof(File, { message: "Невірний формат фото!" }),
-  role: z.enum(["admin", "trainable"], { message: "" }),
+  role: z.enum(["admin", "trainable"]),
 });
 
 const options = [
@@ -52,6 +76,10 @@ const TrainableForm = ({
   type: "create" | "update";
   data?: any;
 }) => {
+  const [telegramNumber, setTelegramNumber] = useState("");
+  const [whatsappNumber, setWhatsappNumber] = useState("");
+  const [viberNumber, setViberNumber] = useState("");
+
   const {
     register,
     handleSubmit,
@@ -64,9 +92,19 @@ const TrainableForm = ({
     console.log(data);
   });
 
+  const sameNumbers = [
+    { type: "telegram", setNumber: setTelegramNumber },
+    { type: "whatsapp", setNumber: setWhatsappNumber },
+    { type: "viber", setNumber: setViberNumber },
+  ];
+
+  console.log("telegramNumber: ", telegramNumber);
+  console.log("whatsappNumber: ", whatsappNumber);
+  console.log("viberNumber: ", viberNumber);
+
   return (
     <form className="flex flex-col gap-8" onSubmit={onSubmit}>
-      <h1 className="text-xl font-semibold">Створити нового покупця</h1>
+      <h1 className="text-xl font-semibold">{type === "create" ? "Створити нового": "Редагувати"} покупця</h1>
       <span className="text-xs text-gray-400 font-medium">
         Інформація для регистрації
       </span>
@@ -94,7 +132,7 @@ const TrainableForm = ({
       <span className="text-xs text-gray-400 font-medium">
         Персональні дані
       </span>
-      <div className="flex gap-1 flex-wrap justify-between gap-4 items-center">
+      <div className="flex flex-wrap justify-between gap-4">
         <InputField
           label="Ім`я"
           name="firstName"
@@ -103,14 +141,7 @@ const TrainableForm = ({
           error={errors?.firstName}
           require
         />
-        <InputField
-          label="Телефон"
-          name="phone"
-          defaultValue={data?.phone}
-          register={register}
-          error={errors?.phone}
-          require
-        />
+
         <InputField
           label="Вага"
           name="weight"
@@ -129,6 +160,15 @@ const TrainableForm = ({
           error={errors?.height}
           require
         />
+        <PhoneField
+          label="Телефон"
+          name="phone"
+          defaultValue={data?.phone}
+          register={register}
+          error={errors?.phone}
+          require
+          sameNumbers={sameNumbers}
+        />
         <InputField
           label="День народження"
           name="birthday"
@@ -138,6 +178,7 @@ const TrainableForm = ({
           error={errors?.birthday}
           require
         />
+
         <InputField
           label="Прізвище"
           name="lastName"
@@ -154,27 +195,6 @@ const TrainableForm = ({
             error={errors?.shortName}
           />
         )}
-        <InputField
-          label="Телеграм"
-          name="telegram"
-          defaultValue={data?.telegram}
-          register={register}
-          error={errors?.telegram}
-        />
-        <InputField
-          label="WhatsApp"
-          name="whatsapp"
-          defaultValue={data?.whatsapp}
-          register={register}
-          error={errors?.whatsapp}
-        />
-        <InputField
-          label="Viber"
-          name="viber"
-          defaultValue={data?.viber}
-          register={register}
-          error={errors?.viber}
-        />
         <UploadField
           label="Аватар"
           name="img"
